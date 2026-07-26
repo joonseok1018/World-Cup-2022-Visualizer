@@ -1,42 +1,44 @@
-# ⚽ 2022 World Cup Final: Tactical Heatmap & Spatial Analytics
+# ⚽ World Cup 2022 Tactical Heatmap & Analytics Dashboard
 
-An interactive football spatial analytics application built with **JavaScript/HTML**. This project streams open-source event data from the every 2022 FIFA World Cup game to calculate spatial action counts, dynamically profile all 35 active players, and render pitch-based density heatmaps.
+An interactive, web-based tactical dashboard for analyzing event-level data from the FIFA World Cup 2022. Built with React and powered by **StatsBomb Open Data**, this application enables side-by-side team comparisons, detailed individual player metrics, and dynamic spatial heatmaps overlaid on a pitch layout.
 
 ---
 
 ## 🌟 Key Features
 
-* **Dynamic Player Discovery:** Scans the match event stream and dynamically counts all **35 unique players** who logged pitch actions.
-* **Interactive Pitch Visualizations:** Maps $X, Y$ coordinate event data onto a standard pitch (120x80 StatsBomb coordinate space).
-* **Dual Implementation:**
-  * **HTML/JS Dashboard:** Web UI with live player filtering and heatmaps.
-  * **Python Script:** Terminal-driven menu with Matplotlib rendering and automatic `.png` saving.
+### ⚔️ Team vs Team Comparison Matrix
+- **Attacking Metrics:** Goals scored vs. Expected Goals ($xG$), total shots, and shots on target.
+- **Possession & Volume:** Total on-ball touches and pass completion percentage.
+- **Defensive & Discipline:** Defensive actions (tackles, interceptions, blocks, recoveries), total fouls committed, and discipline cards.
+
+### 👤 Individual Player Analytics
+- **Match Output:** Goals, assists, expected goals ($xG$), shots, and key passes (shot assists).
+- **Time & Volume:** Total minutes played, total touches, and normalized **Touches per 90 minutes**.
+- **Passing Efficiency:** Completed passes vs. total attempts with percentage accuracy.
+
+### 🗺️ Dynamic Pitch & Spatial Heatmap
+- **Event Filtering:** Filter pitch actions by **All Actions**, **Passes Only**, or **Shots Only**.
+- **Dual Layering:** Blurred heatmap density underlying precise event touch points.
+- **Color-Coded Legend:** Visual distinction between passes, shots, and general on-ball touches.
 
 ---
 
-## 📊 Dataset Overview
+## 🛠️ Tech Stack & Dependencies
 
-* **Source:** [Hudl / StatsBomb Open Data GitHub Repository](https://github.com/hudl/open-data)
-* **Match ID:** `3869151.json` (Argentina vs. France — December 18, 2022)
-* **Total Players Tracked:** **35 Players** (17 Argentina, 18 France)
-* **Coordinates Scale:** $X \in [0, 120]$, $Y \in [0, 80]$
+- **Frontend Framework:** React 18
+- **Data Source:** [StatsBomb Open Data Repository](https://github.com/statsbomb/open-data)
+- **Styling:** CSS3 (Custom CSS variables with Dark Mode / Tactical Board theme)
+- **Compiler:** Babel Standalone (In-browser JSX compilation for quick single-file setup)
 
 ---
 
 ## 🚀 Quick Start
 
-### Option 1: Web Dashboard (HTML & JS)
+Because this dashboard is built as a self-contained, single-file web application, no complex build tools or `npm install` steps are required to get started.
 
-1. Clone or download this repository.
-2. Open `index.html` directly in any web browser (no local server required).
-3. Use the top selection menu to search through all **35 players** ranked by on-pitch activity.
+### Running Locally
 
----
-
-### Option 2: Python Script
-
-#### Prerequisites
-Install the required dependencies using `pip`:
-
-```bash
-pip install requests matplotlib
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/your-username/world-cup-2022-dashboard.git](https://github.com/your-username/world-cup-2022-dashboard.git)
+   cd world-cup-2022-dashboard
