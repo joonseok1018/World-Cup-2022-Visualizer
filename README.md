@@ -1,6 +1,6 @@
 # ⚽ 2022 World Cup Final: Tactical Heatmap & Spatial Analytics
 
-An interactive football spatial analytics application built with **JavaScript/HTML** and **Python**. This project streams open-source event data from the 2022 FIFA World Cup Final (Argentina vs. France) to calculate spatial action counts, dynamically profile all 35 active players, and render pitch-based density heatmaps.
+An interactive football spatial analytics application built with **JavaScript/HTML**. This project streams open-source event data from the every 2022 FIFA World Cup game to calculate spatial action counts, dynamically profile all 35 active players, and render pitch-based density heatmaps.
 
 ---
 
